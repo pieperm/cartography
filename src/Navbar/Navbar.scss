@@ -1,0 +1,18 @@
+@import "../index";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-primary;
+
+  h1, a {
+    margin-left: 2rem;
+    font-size: var(small);
+    font-weight: 500;
+    text-decoration: none;
+    color: $color-white;
+  }
+
+}
