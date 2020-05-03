@@ -1,0 +1,21 @@
+@import "../index";
+
+label {
+  color: $color-text;
+  font-size: 1.2rem;
+}
+
+input {
+  color: $color-text;
+  background-color: $color-white;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border: 2px solid $color-white;
+  border-radius: 4px;
+  margin-left: 1rem;
+  transition-duration: 0.2s;
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
