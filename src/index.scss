@@ -4,7 +4,7 @@ $color-primary: #435e9a;
 $color-primary-light: #6d8eee;
 $color-primary-dark: #2f457b;
 $color-white: #e0e0e0;
-$color-background: #b3b3b3;
+$color-background: #c1c1c1;
 
 /* Fonts */
 $font-small: 0.7rem;
@@ -33,4 +33,11 @@ code {
 
 .page {
   padding: 2rem;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

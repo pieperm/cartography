@@ -12,24 +12,17 @@ class CartListItem extends Component {
     render() {
         return (
             <div className="cart-list-item">
-                <h2>{this.props.name}</h2>
-                <p>${this.props.price}</p>
-                <p>Qty: {this.props.quantity}</p>
-                <p>{this.props.store}</p>
-                <div>
-                    <Button>REMOVE</Button>
-                    <Button>VIEW</Button>
-                </div>
+                <h2>{"name"}</h2>
+                <p>${"10"} items</p>
+                <p>Qty: {"5"}</p>
+                <Button>View</Button>
             </div>
         );
     }
 }
 
 CartListItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    quantity: PropTypes.number.isRequired,
-    store: PropTypes.string.isRequired
+    productId: PropTypes.number.isRequired
 }
 
 

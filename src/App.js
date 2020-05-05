@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Browse from "./routes/Browse";
 import Carts from "./routes/Carts";
 import Product from "./routes/Product";
+import CartDetails from "./routes/CartDetails";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             <Route exact={true} path="/carts" component={Carts}/>
             <Route path="/product/:productId" render={({ match }) => (
                 <Product productId={match.params.productId}/>
+            )}/>
+            <Route path="/cart/:cartId" render={({ match }) => (
+                <CartDetails cartId={match.params.cartId}/>
             )}/>
         </BrowserRouter>
     </div>

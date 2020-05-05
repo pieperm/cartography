@@ -11,7 +11,8 @@ class Carts extends Component {
         return (
             <div className="page">
                 <h1>My Carts</h1>
-                <CartListItem name={"Cart1"} price={2.00} quantity={5} store={"Walmart"}/>
+                <CartListItem productId={1}/>
+                <CartListItem productId={2}/>
             </div>
         );
     }
