@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {BrowserRouter, Link} from "react-router-dom";
 import './Navbar.scss';
 
 class Navbar extends Component {
@@ -11,9 +12,7 @@ class Navbar extends Component {
         return(
         <div className="nav">
             <h1>Cartography</h1>
-            <a>Home</a>
-            <a>Browse</a>
-            <a>Carts</a>
+            {this.props.children}
         </div>
         );
     }
