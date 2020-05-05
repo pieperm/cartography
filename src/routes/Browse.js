@@ -9,7 +9,7 @@ class Browse extends Component {
 
     render() {
         return (
-            <div>
+            <div className="page">
                 <h1>Browse</h1>
                 <Button>Click!</Button>
             </div>

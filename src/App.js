@@ -1,8 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
-import Browse from "./pages/Browse";
-import Carts from "./pages/Carts";
+import Browse from "./routes/Browse";
+import Carts from "./routes/Carts";
+import Product from "./routes/Product";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
                 <h1>Homepage</h1>
             )}/>
             <Route exact={true} path="/carts" component={Carts}/>
+            <Route path="/product/:productId" render={({ match }) => (
+                <Product productId={match.params.productId}/>
+            )}/>
         </BrowserRouter>
     </div>
   );
