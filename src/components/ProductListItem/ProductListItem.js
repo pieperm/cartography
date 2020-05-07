@@ -11,7 +11,7 @@ class ProductListItem extends Component {
 
     render() {
         return (
-            <div className="product-list-item">
+            <div className="list-item">
                 <h2>{this.props.name}</h2>
                 <p>${this.props.price}</p>
                 <p>Qty: {this.props.quantity}</p>

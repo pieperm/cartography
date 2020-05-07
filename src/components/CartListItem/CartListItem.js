@@ -11,7 +11,7 @@ class CartListItem extends Component {
 
     render() {
         return (
-            <div className="cart-list-item">
+            <div className="list-item">
                 <h2>{"name"}</h2>
                 <p>${"10"} items</p>
                 <p>Qty: {"5"}</p>

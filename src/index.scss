@@ -41,3 +41,21 @@ code {
   justify-content: space-between;
   align-items: center;
 }
+
+.list-item {
+  background-color: $color-white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  h2 {
+    margin-left: 1rem;
+  }
+
+  Button {
+    margin-right: 1rem;
+  }
+}

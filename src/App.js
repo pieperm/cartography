@@ -5,6 +5,7 @@ import Browse from "./routes/Browse";
 import Carts from "./routes/Carts";
 import Product from "./routes/Product";
 import CartDetails from "./routes/CartDetails";
+import Orders from "./routes/Orders";
 
 function App() {
   return (
@@ -14,18 +15,21 @@ function App() {
                 <Link to="/">Home</Link>
                 <Link to="/browse">Browse</Link>
                 <Link to="/carts">Carts</Link>
+                <Link to="/orders">Orders</Link>
             </Navbar>
-            <Route exact={true} path="/browse" component={Browse}/>
             <Route exact={true} path="/" render={() => (
                 <h1>Homepage</h1>
             )}/>
+            <Route exact={true} path="/browse" component={Browse}/>
             <Route exact={true} path="/carts" component={Carts}/>
+            <Route path="/orders" component={Orders}/>
             <Route path="/product/:productId" render={({ match }) => (
                 <Product productId={match.params.productId}/>
             )}/>
             <Route path="/cart/:cartId" render={({ match }) => (
                 <CartDetails cartId={match.params.cartId}/>
             )}/>
+
         </BrowserRouter>
     </div>
   );
