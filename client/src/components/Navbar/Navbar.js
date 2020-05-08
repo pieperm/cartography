@@ -1,12 +1,7 @@
 import React, {Component} from "react";
-import {BrowserRouter, Link} from "react-router-dom";
 import './Navbar.scss';
 
 class Navbar extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return(

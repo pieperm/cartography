@@ -5,10 +5,6 @@ import "./ProductListItem.scss";
 
 class ProductListItem extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="list-item">
@@ -17,8 +13,8 @@ class ProductListItem extends Component {
                 <p>Qty: {this.props.quantity}</p>
                 <p>{this.props.store}</p>
                 <div>
-                    <Button>Remove</Button>
-                    <Button>View</Button>
+                    <Button link={'/'}>Remove</Button>
+                    <Button link={`/products/${this.props.id}`}>View</Button>
                 </div>
             </div>
         );
@@ -26,6 +22,7 @@ class ProductListItem extends Component {
 }
 
 ProductListItem.propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     quantity: PropTypes.number.isRequired,

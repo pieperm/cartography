@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import CartListItem from "../components/CartListItem/CartListItem";
-import ApiClient from "../ApiClient";
 
 class Carts extends Component {
 
@@ -32,7 +31,13 @@ class Carts extends Component {
             <div className="page">
                 <h1>My Carts</h1>
                 {this.state.carts && this.state.carts.map(cart => (
-                    <CartListItem key={cart.id} productId={cart.id}/>
+                    <CartListItem
+                        key={cart.cartid}
+                        cartId={cart.cartid}
+                        name={cart.name}
+                        numItems={0}
+                        description={cart.description}
+                    />
                 ))}
             </div>
         );
