@@ -45,7 +45,6 @@ class App extends Component {
               }}/>
               <Route path="/orders/:orderId" render={({ match }) => {
                 const orderId = parseInt(match.params.orderId);
-                console.log(orderId);
                 return <OrderDetails orderId={orderId}/>
               }}/>
             </Switch>

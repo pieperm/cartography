@@ -8,7 +8,8 @@ class CartDetails extends Component {
         super(props);
         this.state = {
             name: '',
-            description: ''
+            description: '',
+            products: []
         }
     }
 
@@ -28,6 +29,20 @@ class CartDetails extends Component {
         } catch (e) {
             console.error(e.message);
         }
+
+        try {
+            await fetch(`http://localhost:9000/carts/${this.props.cartId}/products`)
+                .then(res => {
+                    return res.json();
+                })
+                .then(products => {
+                    this.setState({
+                        products: products
+                    })
+                })
+        } catch (e) {
+            console.error(e.message);
+        }
     }
 
     render() {
@@ -35,12 +50,14 @@ class CartDetails extends Component {
             <div className="page">
                 <h1>{this.state.name}</h1>
                 <p>{this.state.description || ''}</p>
-                <ProductListItem
-                    id={1000}
-                    name={"Milk"}
-                    price={1.99}
-                    quantity={2}
-                    store={"Walmart"}/>
+                {this.state.products.map(product => (
+                    <ProductListItem
+                        id={product.id}
+                        name={"Product"}
+                        price={1.99}
+                        quantity={product.quantity}
+                        store={"Walmart"}/>
+                ))}
             </div>
         );
     }

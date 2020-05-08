@@ -46,6 +46,16 @@ const getCart = (id, req, res) => {
     });
 }
 
+const getProductsInCart = (id, req, res) => {
+    pool.query(`SELECT * FROM CONTAINS_PRODUCT WHERE CONTAINS_PRODUCT.CART_ID=${id}`, (err, result) => {
+        if (err) {
+            console.error(err);
+            throw err;
+        }
+        res.status(200).json(result.rows);
+    });
+}
+
 const getAllOrders = (req, res) => {
     pool.query('SELECT * FROM ORDERS', (err, result) => {
         if (err) {
@@ -72,5 +82,6 @@ module.exports = {
     getProduct,
     getCart,
     getAllOrders,
-    getOrder
+    getOrder,
+    getProductsInCart
 }
