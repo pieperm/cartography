@@ -1,3 +1,30 @@
+This app was created using React, Express, Node, and PostgreSQL.
+To start the front-end, `cd` into `client` and run:
+
+#### `npm start`
+
+Then, to start the back-end, `cd` into `api` and again run:
+
+#### `npm start`
+
+These should be running concurrently across two separate terminal instances.
+
+To set up the PostgreSQL database locally, you will need to have it installed and
+configured with your own username (postgres) and a unique password 
+(once these are set, you will need to configure the pool in `api/queries.js`)
+From there you can create a database (again this must correspond to the pool).
+To connect to the database (assuming it's named `cartography_db`) you can connect to it with:
+
+#### `psql> \c cartography_db`
+
+The schema can be set up from `psql`. First, `cd` into `cartography` and then from `psql` run:
+
+#### `psql> \i seeds/tables.sql`
+
+Once this is finished, you can optionally populate the database with some sample data:
+
+#### `psql> \i seeds/data.sql`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
